@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArrayManipulation</name>
+    </assembly>
+    <members>
+        <member name="T:ArrayManipulation.ArrayExtension">
+            <summary>Provides methods for array extension.</summary>
+        </member>
+        <member name="M:ArrayManipulation.ArrayExtension.FindBalanceIndex(System.Int32[])">
+            <summary>Finds the index of the balance.</summary>
+            <param name="array">An array.</param>
+            <returns>Returns index or <em>null</em> if index not found.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when array is null.</exception>
+        </member>
+    </members>
+</doc>
