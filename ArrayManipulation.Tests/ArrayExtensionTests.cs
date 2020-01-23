@@ -8,23 +8,22 @@ namespace ArrayManipulation.Tests
 {
     public class ArrayExtensionTestsDataSource : IEnumerable
     {
-        public int[] RandomArray(int length)
+        public int[] GetRandomArray(int length)
         {
             if (length < 1)
             {
                 throw new ArgumentException("Array cannot be empty.");
             }
 
-            int[] array = new int[length];
-            array = Enumerable.Range(0, length - 1).ToArray();
+            int[] array = Enumerable.Range(0, length - 1).ToArray();
             return array;
         }
 
         public IEnumerator GetEnumerator()
         {
-            yield return RandomArray(557576);
-            yield return RandomArray(1000000);
-            yield return RandomArray(20000000);
+            yield return GetRandomArray(557576);
+            yield return GetRandomArray(1000000);
+            yield return GetRandomArray(20000000);
         }
     }
 
