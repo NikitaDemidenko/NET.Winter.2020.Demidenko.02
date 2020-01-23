@@ -16,13 +16,13 @@ namespace ArrayManipulation
                 throw new ArgumentNullException(nameof(array));
             }
 
-            int rightPartSum = 0;
+            long rightPartSum = 0;
             for (int i = 2; i < array.Length; i++)
             {
                 rightPartSum += array[i];
             }
 
-            int leftPartSum = 0;
+            long leftPartSum = 0;
             for (int j = 1; j < array.Length - 1; j++)
             {
                 leftPartSum += array[j - 1];
