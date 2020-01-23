@@ -16,24 +16,22 @@ namespace ArrayManipulation
                 throw new ArgumentNullException(nameof(array));
             }
 
-            for (int i = 1; i < array.Length - 1; i++)
+            int rightPartSum = 0;
+            for (int i = 2; i < array.Length; i++)
             {
-                int leftPartSum = 0;
-                int rightPartSum = 0;
-                for (int j = i - 1; j >= 0; j--)
-                {
-                    leftPartSum += array[j];
-                }
+                rightPartSum += array[i];
+            }
 
-                for (int k = i + 1; k < array.Length; k++)
-                {
-                    rightPartSum += array[k];
-                }
-
+            int leftPartSum = 0;
+            for (int j = 1; j < array.Length - 1; j++)
+            {
+                leftPartSum += array[j - 1];
                 if (leftPartSum == rightPartSum)
                 {
-                    return i;
+                    return j;
                 }
+
+                rightPartSum -= array[j + 1];
             }
 
             return null;
@@ -61,8 +59,7 @@ namespace ArrayManipulation
 
         private static int MaximumItem(int[] array, int leftIndex, int rightIndex)
         {
-            int middleIndex;
-            middleIndex = (leftIndex + rightIndex) / 2;
+            int middleIndex = (leftIndex + rightIndex) / 2;
             int leftPartMax;
             int rightPartMax;
             if (leftIndex == rightIndex)
