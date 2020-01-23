@@ -60,14 +60,14 @@ namespace MatrixManipulations
 
                 isHorizontallyDirection = !isHorizontallyDirection;
 
-                if (!isHorizontallyDirection)
+                if (isHorizontallyDirection)
                 {
-                    isHorizontallyRightDirection = !isHorizontallyRightDirection;
-                    count--;
+                    isVerticallyDownDirection = !isVerticallyDownDirection;
                 }
                 else
                 {
-                    isVerticallyDownDirection = !isVerticallyDownDirection;
+                    isHorizontallyRightDirection = !isHorizontallyRightDirection;
+                    count--;
                 }
             }
 
