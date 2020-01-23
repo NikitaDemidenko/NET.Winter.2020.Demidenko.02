@@ -8,10 +8,17 @@
             <summary>Provides methods for array extension.</summary>
         </member>
         <member name="M:ArrayManipulation.ArrayExtension.FindBalanceIndex(System.Int32[])">
-            <summary>Finds the index of the balance.</summary>
+            <summary>Finds the maxIndex of the balance.</summary>
             <param name="array">An array.</param>
-            <returns>Returns index or <em>null</em> if index not found.</returns>
+            <returns>Returns maxIndex or <em>null</em> if maxIndex not found.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when array is null.</exception>
+        </member>
+        <member name="M:ArrayManipulation.ArrayExtension.FindMaximumItem(System.Int32[])">
+            <summary>Finds the maximum item in the given array.</summary>
+            <param name="array">An array.</param>
+            <returns>Returns a value of maximum element.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when array is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when array is empty.</exception>
         </member>
     </members>
 </doc>
